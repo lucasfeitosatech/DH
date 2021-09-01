@@ -114,3 +114,76 @@ https://drive.google.com/file/d/1veS-7eXSMIVvgo7LObU2wLPs3uyEM-vs/view
 Código ficou muito repetido nos cases, dado que as condições são as mesmas independente do alimento para a queima e kabum, poderia ter sido criada uma funcao ou utilizar variaveis para buscar o tempoPadrao e realizar as condicoes apos a escolha do alimento.
 */
 
+
+function tempo(tempoTotal,tempoPadrao) {
+
+  // Se o tempo informado for maior que 2x o necessário, exibir mensagem que a comida queimou.
+ // - Se o tempo for menor que o padrão, exibir a mensagem: "tempo insuficiente"; 
+ // - Se o tempo for 3x maior que o necessário para o prato, o microondas deve exibir a mensagem: “kabumm”;
+
+ if(tempoTotal > 2*tempoPadrao && tempoTotal<3*tempoPadrao){
+   console.log("Comida queimou!");
+ } else if (tempoTotal < tempoPadrao){
+   console.log("Tempo insuficiente");
+ } else if(tempoTotal > 3*tempoPadrao) {
+   console.log("Kabummm");
+ }
+}
+
+function microondas(prato, tempoTotal) {
+  let tempoPadrao = 0;
+
+  switch (prato) {
+    case 1:
+      tempoPadrao = 10;
+      console.log("pipoca");
+      break;
+    case 2:
+      tempoPadrao = 8;
+      console.log("macarrao");
+      break;
+    case 3:
+      tempoPadrao = 15
+      console.log("carne");
+      break;
+    case 4:
+      tempoPadrao = 12
+      console.log("feijao");
+      break;
+    case 5:
+      tempoPadrao = 8
+      console.log("brigadeiro");
+      break;
+    default:
+      console.log("Prato inexistente");
+  }
+
+  tempo(tempoTotal,tempoPadrao);
+
+
+  
+
+  // if(prato == 1){
+
+  // } else if(prato == 2){
+
+  // } else if(prato == 3 ){
+    
+  // }else if(prato == 4){
+    
+  // }else if(prato == 5){
+    
+  // } else {
+
+
+  // }
+
+  console.log("Prato pronto! Bom apetite!");
+
+}
+
+
+
+microondas(1,10);
+
+
