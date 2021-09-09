@@ -84,4 +84,51 @@ function competicao(a,b,c){
 
 }
 
-competicao(a,a,a);
+//competicao(a,a,a);
+
+// Se a[i] > b[i], então Alice recebe 1 ponto.
+// 	Se a[i] < b[i], então Bob recebe 1 ponto.
+// 	Se a[i] = b[i], nenhuma pessoa recebe um ponto.
+
+
+
+
+
+
+
+const alicia = [23, 69, 32];
+const bob = [12, 67, 43];
+
+const participante1 = {
+  nome:"Lucas",
+  notas:[23, 69, 32]
+}
+
+const participante2 = {
+  nome:"Bob",
+  notas:[12, 67, 43]
+}
+
+ 
+ function encontrarGanhador(participante1, participante2) {
+    let pontosA = 0;
+    let pontosB = 0;
+
+    for(let i = 0; i< participante1.notas.length ; i++){
+      if(participante1.notas[i] > participante2.notas[i]){
+        pontosA++;
+      } else if (participante2.notas[i] > participante1.notas[i]){
+        pontosB++;
+      }
+    }
+
+    if(pontosA > pontosB) {
+      console.log(`${participante1.nome} ganhou!`);
+    } else if (pontosB > pontosA){
+      console.log(`${participante2.nome} ganhou`);
+    } else {
+      console.log("Deu empate!");
+    }
+ }
+
+ encontrarGanhador(participante1,participante2);
