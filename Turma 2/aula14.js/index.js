@@ -1,11 +1,15 @@
 let banco = require("./banco.js"); //Meu modulo
 const fs = require('fs'); // Modulo nativo do node
 let readlineSync = require('readline-sync');//Modulo de um terceiro
+let soma = require('./soma');
+let soma2 = require('./soma');
 //console.log(readlineSync);
 
-let titular = readlineSync.question('Titular? ');
-let saldo = readlineSync.question('Saldo? ');
-console.log('Ola ' + titular + ' seu saldo e: ' + saldo);
+// let titular = readlineSync.question('Titular? ');
+// let saldo = readlineSync.question('Saldo? ');
+// console.log('Ola ' + titular + ' seu saldo e: ' + saldo);
+require('./soma').soma(5,6);
+
 
 
 
