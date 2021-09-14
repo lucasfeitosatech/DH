@@ -25,9 +25,9 @@ for(let i = 0;i<linhas.length;i++){
   const saldo = linha[2];
   const titular = linha[3];
 
-  console.log(`Numero: ${numero} Tipo: ${tipo} Saldo: ${saldo} Titular:${titular} `);
-  
-  
+  let conta = new banco.Conta(Number(numero),tipo,Number(saldo),titular);
+
+  console.log(conta);
 }
 // console.log(linhas);
 
