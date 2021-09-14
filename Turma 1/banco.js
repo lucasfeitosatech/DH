@@ -3,14 +3,14 @@
 // Saldo em $ (valor apenas)
 // Titular da conta (nome completo)
 
-
-
 function Conta(mNumero,mTipo,mSaldo,mTitular){
   this.numero = mNumero;
   this.tipo = mTipo;
   this.saldo = mSaldo;
   this.titular = mTitular;
 }
+
+module.exports.Conta = Conta;
 
 // numero	tipo	saldo	titular
 // 5486273622	Conta Corrente	27771	Abigael Natte
@@ -73,7 +73,7 @@ let banco = {
 
 //Exportando para outro arquivo
 module.exports.banco = banco;
-module.exports.outroObjeto = {};
+
 // module.exports = function(a,b){
 //   return a +b;
 // }
