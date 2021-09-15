@@ -42,7 +42,33 @@ const soma = function(numA, numB, callback){
 
 }
 
-soma(5,6,imprimir5);
+// soma(5,6,imprimir5);
+
+//Exercicio de Calcula Perimetro da Lista (Tipo e Perimetro)
+const calculaPerimetro = (lado1,lado2,lado3,callback) => {
+  const perimetro = lado1 + lado2 + lado3;
+  return {
+    tipo: callback(lado1,lado2,lado3),
+    perimetro:perimetro
+  };
+}
+
+const tipoTriangulo = (lado1,lado2,lado3) => {
+  if(lado1 == lado2  && lado1 == lado3){
+    //console.log("Equilatero");
+    return "Equilatero";
+  } else if (lado1 === lado2 || lado2 === lado3 || lado1 === lado3){
+    //console.log("Isoceles");
+    return "Isoceles";
+  } else {
+    //console.log("Escaleno");
+    return "Escaleno";
+  }
+}
+
+const perimetro = calculaPerimetro(5,4,5,tipoTriangulo);
+
+console.log(perimetro);
 
 
 
