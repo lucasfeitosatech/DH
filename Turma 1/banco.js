@@ -3,7 +3,8 @@
 // Saldo em $ (valor apenas)
 // Titular da conta (nome completo)
 
-//console.log(module);
+
+
 
 function Conta(mNumero,mTipo,mSaldo,mTitular){
   this.numero = mNumero;
@@ -12,7 +13,9 @@ function Conta(mNumero,mTipo,mSaldo,mTitular){
   this.titular = mTitular;
 }
 
-module.exports.Conta = Conta;
+module.exports.meuConstrutorDeConta = Conta;
+module.exports.algumaCoisaASerExportada = [1,2,3,4];
+// console.log(module);
 
 // console.log(module);
 
@@ -28,9 +31,12 @@ module.exports.Conta = Conta;
 // 3151956165	Conta Corrente	7601	Alonso Wannan
 // 2138105881	Conta Poupança	33196	Bendite Huggett
 
-let conta = new Conta(123,"Conta corrente",99,"Lucas Feitosa");
+let conta = new Conta(123,"Conta Corrente",99,"Lucas Feitosa");
 let conta2 = new Conta(1183971869,"Conta Corrente",101,"Abigael Natte");
 let conta3 = new Conta(2138105881,"Conta Poupança",200,"Bendite Huggett");
+let conta4 = new Conta(233,"Conta Corrente",300,"Teste");
+let conta5 = new Conta(181,"Conta Poupança",400,"Teste 1");
+let conta6 = new Conta(876,"Conta Poupança",500,"Teste 2");
 
 // A partir dos 3 usuários, gere uma lista 
 
@@ -43,7 +49,7 @@ let conta3 = new Conta(2138105881,"Conta Poupança",200,"Bendite Huggett");
 
 
 
-let lista = [conta,conta2,conta3];
+let lista = [conta,conta2,conta3,conta4,conta5,conta6];
 // Também nos pedem a criação de um objeto literal chamado banco que terá uma 
 // propriedade chamada clientes, ele será composto pela lista de objetos gerados no ponto anterior.
 //JSON - JavaScript Object Notation
@@ -71,9 +77,7 @@ let banco = {
     //     return cliente;
     // }
     
-    let cliente = this.clientes.find(function(elemento){
-      return elemento.titular === nome;
-    });
+    let cliente = this.clientes.find( elemento => elemento.titular === nome && elemento.saldo < 100 );
     return cliente;
 
 
