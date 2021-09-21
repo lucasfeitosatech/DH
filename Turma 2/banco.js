@@ -3,7 +3,6 @@
 // Saldo em $ (valor apenas)
 // Titular da conta (nome completo)
 
-//console.log(module);
 
 function Conta(mNumero,mTipo,mSaldo,mTitular){
   this.numero = mNumero;
@@ -14,7 +13,7 @@ function Conta(mNumero,mTipo,mSaldo,mTitular){
 
 module.exports.Conta = Conta;
 
-// console.log(module);
+//console.log(module);
 
 // numero	tipo	saldo	titular
 // 5486273622	Conta Corrente	27771	Abigael Natte
@@ -28,9 +27,10 @@ module.exports.Conta = Conta;
 // 3151956165	Conta Corrente	7601	Alonso Wannan
 // 2138105881	Conta Poupança	33196	Bendite Huggett
 
-let conta = new Conta(123,"Conta corrente",99,"Lucas Feitosa");
-let conta2 = new Conta(1183971869,"Conta Corrente",101,"Abigael Natte");
+let conta = new Conta(123,"Conta corrente",3000,"Lucas Feitosa");
+let conta2 = new Conta(1183971869,"Conta Corrente",100,"Abigael Natte");
 let conta3 = new Conta(2138105881,"Conta Poupança",200,"Bendite Huggett");
+let conta4 = new Conta(123,"Conta corrente",3000,"Leticia Cliente");
 
 // A partir dos 3 usuários, gere uma lista 
 
@@ -43,17 +43,9 @@ let conta3 = new Conta(2138105881,"Conta Poupança",200,"Bendite Huggett");
 
 
 
-let lista = [conta,conta2,conta3];
+let lista = [conta,conta2,conta3,conta4];
 // Também nos pedem a criação de um objeto literal chamado banco que terá uma 
 // propriedade chamada clientes, ele será composto pela lista de objetos gerados no ponto anterior.
-//JSON - JavaScript Object Notation
-
-let pessoa = {
-  nome:"Lucas",
-  idade:"26",
-  
-}
-
 
 let banco = {
   clientes:lista,
@@ -67,15 +59,14 @@ let banco = {
 
     // }
     // for(let cliente of this.clientes){
-    //   if(cliente === nome)
+    //   if(cliente.titular === nome){
     //     return cliente;
+    //   }
     // }
-    
-    let cliente = this.clientes.find(function(elemento){
+    let cliente = this.clientes.find(function(elemento,index){
       return elemento.titular === nome;
     });
-    return cliente;
-
+    return cliente
 
   },
   deposito:function(nome,valor){
@@ -96,15 +87,13 @@ let banco = {
 
 //Exportando para outro arquivo
 module.exports.banco = banco;
-// module.exports.banco.prop4 = 4;
-module.exports.prop1 = 1;
-module.exports.prop2 = 2;
-module.exports.myFunction = function(){
 
-}
-//module.exports = exports
-exports.prop3 = 3;
 //console.log(module);
+let cliente = banco.consultarCliente("Lucas Feitosa");
+let cliente2 = banco.consultarCliente("Lucas Feitosa");
+let cliente3 = banco.consultarCliente("Lucas Feitosa");
+//console.log(cliente);
+
 
 // module.exports = function(a,b){
 //   return a +b;
@@ -116,8 +105,6 @@ exports.prop3 = 3;
 
 
 // console.log(conta);
-
-
 
 
 
