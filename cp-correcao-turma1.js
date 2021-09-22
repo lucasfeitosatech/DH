@@ -110,6 +110,7 @@ else if (tempo >= padrao && tempo < (padrao * 2)) {
 Nome: Gustavo Henrique Muraro Monteiro
 
 Grupo 2: 
+Gustavo Henrique Muraro Monteiro
 Julio Campos, 
 Peterson Alves, 
 Ronan Junqueira, 
