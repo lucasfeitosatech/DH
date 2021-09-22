@@ -27,10 +27,12 @@ module.exports.Conta = Conta;
 // 3151956165	Conta Corrente	7601	Alonso Wannan
 // 2138105881	Conta Poupança	33196	Bendite Huggett
 
-let conta = new Conta(123,"Conta corrente",3000,"Lucas Feitosa");
-let conta2 = new Conta(1183971869,"Conta Corrente",100,"Abigael Natte");
-let conta3 = new Conta(2138105881,"Conta Poupança",200,"Bendite Huggett");
-let conta4 = new Conta(123,"Conta corrente",3000,"Leticia Cliente");
+let conta = new Conta(512,"Conta Corrente",3000.32,"Lucas Feitosa");
+let conta2 = new Conta(001,"Conta Corrente",100.90,"Abigael Natte");
+let conta3 = new Conta(098,"Conta Poupança",200.10,"Bendite Huggett");
+let conta4 = new Conta(123,"Conta Corrente",4230.50,"Cliente 2");
+let conta5 = new Conta(223,"Conta Poupança",3321.39,"Cliente 3");
+let conta6 = new Conta(323,"Conta Poupança",2212.43,"Cliente 4");
 
 // A partir dos 3 usuários, gere uma lista 
 
@@ -43,7 +45,7 @@ let conta4 = new Conta(123,"Conta corrente",3000,"Leticia Cliente");
 
 
 
-let lista = [conta,conta2,conta3,conta4];
+let lista = [conta,conta2,conta3,conta4,conta5,conta6];
 // Também nos pedem a criação de um objeto literal chamado banco que terá uma 
 // propriedade chamada clientes, ele será composto pela lista de objetos gerados no ponto anterior.
 
