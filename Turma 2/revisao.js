@@ -11,3 +11,8 @@
 let bancoDeDados = require('./aula19/pessoas');
 
 bancoDeDados.mediaDaIdadePessoasOtimo();
+let qtd = bancoDeDados.quantidadePessoasRegular();
+console.log("Quantidade de pessoas regular:  " + qtd);
+qtd = bancoDeDados.porcentagemBom();
+console.log("Porcentagem bom:   " + qtd + "%");
+

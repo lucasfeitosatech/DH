@@ -19,7 +19,7 @@ function Pessoa(_altura,_sexo,_nome,_idade,_opiniao){
 // let cpf = 032
 
 let pessoas = [];
-for(let i = 1;i<=100;i++){
+for(let i = 1;i<=111;i++){
   //Math.random() = Gerar numero aleatorio entre 0 e 1
   let numeroAleatorio = Math.random();
   let altura = numeroAleatorio + 1;
@@ -128,20 +128,41 @@ module.exports = {
 
     for(let pessoa of this.pessoas){
       
-      if(pessoa.opiniao == '1'){
+      if(pessoa.opiniao == '3'){
         contadorOtimo = contadorOtimo + 1;
         somaDasIdades += pessoa.idade;
-      }
+      } 
     
     }
 
     const media = somaDasIdades/contadorOtimo;
     console.log(media);
-  }
-// a quantidade de pessoas que responderam regular;
+  },
+  // a quantidade de pessoas que responderam regular;
+  quantidadePessoasRegular:function(){
+    let contadorRegular = 0;
+    for(let pessoa of this.pessoas){
+      if(pessoa.opiniao == '1'){
+        contadorRegular++;
+      }
+    }
+    return contadorRegular;
+
+  },
+
+
+
 // a porcentagem de pessoas que responderam bom entre todos os espectadores analisados.
 
-
+  porcentagemBom:function() {
+    let contadorBom = 0;
+    for(let pessoa of this.pessoas){
+      if(pessoa.opiniao == '2'){
+        contadorBom++;
+      }
+    }
+    return (contadorBom/this.pessoas.length)*100;
+  }
 
 
 }
