@@ -13,6 +13,7 @@ let objetoPai = {
     for(let objeto of this.listaObjetos){
       console.log("objeto: " + objeto.numeros + " soma: " + objeto.func2() );
     }
+    
   },
   funcPai2: () => {
     console.log(objetoPai.propPai1);
