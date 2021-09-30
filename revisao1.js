@@ -9,9 +9,15 @@ function MeuObjeto(prop1_,prop2_,prop3_){
   }
   this.func2 = function() {
     let soma = 0;
+    // let soma =  this.numeros.reduce(function(elementoAnterior,proximoElmento){
+    //     // [1,2,3,4];
+    //   return elementoAnterior + proximoElmento;
+
+    // });
     for(let numero of this.numeros){
       soma = soma + numero;
     }
+    
     return soma;
   }
     
