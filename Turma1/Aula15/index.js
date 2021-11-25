@@ -60,8 +60,29 @@ const banco = {
     for(let i = 0 ; i < this.clientes.length ; i++){
       if(this.clientes[i].titular == titularABuscar ){
         return this.clientes[i];
-      }
+      } 
     }
+
+    return -1;
+  },
+  deposito: function(titular,saldo){
+    const cliente = this.consultarCliente(titular);
+    if(cliente != -1){
+      cliente.saldo += saldo;
+    }
+  },
+  saque:function(titular,valor){
+    const cliente = this.consultarCliente(titular);
+    if(cliente != -1){
+      if(cliente.saldo >= valor){
+        cliente.saldo -= valor;
+      }
+      
+    }
+    return cliente.saldo;
+  },
+  criarUsuario:function(titular,tipoConta){
+
   }
 }
 
