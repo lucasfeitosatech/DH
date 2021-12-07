@@ -1,4 +1,5 @@
 let texto = "           abc213 213 123 123 s              ";
+let grupo = require('../Modulos/grupo');
 // console.log(texto.replaceAll(" ","").replace("abc213","Lucas"));
 
 let numeros = [1, 2, 3, 4, 5];

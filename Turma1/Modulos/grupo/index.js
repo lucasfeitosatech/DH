@@ -38,6 +38,9 @@ module.exports = {
 
     console.log("Pessoa com menor altura: ",pessoaComMenorAltura);
     console.log("Pessoa com maior altura: ",pessoaComMaiorAltura);
+    return {
+      maiorAltura:pessoaComMaiorAltura.altura,
+      menorAltura:pessoaComMenorAltura.altura
+    }
   },
-  dd
 }
