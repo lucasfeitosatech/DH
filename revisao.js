@@ -48,7 +48,7 @@ let concurso = {
     console.log("Vencedor: " + vencedor.nome + " media: " + vencedor.pontuacaoMedia());
   },
   vencedorPontuacaoMaior:function(){
-
+    
   }
 }
 
