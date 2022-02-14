@@ -1,1 +1,0 @@
-let grupo = require('./grupo');
