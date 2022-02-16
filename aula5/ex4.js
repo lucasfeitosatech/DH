@@ -8,9 +8,10 @@ https://kb-hom-master1.accesstage.com.br:30443/api-planoeplano-zemo/swagger-ui/i
 
 // Ctrl + /
 //Alt + Shift + A
-function imc(nome,sobrenome,idade,peso,altura){
+function imc(sexo,idade,peso,altura){
   const imc = peso/altura**2;
-  console.log(nome + " " + sobrenome + " tem " + idade + " anos e seu índice de massa corporal é de: " + imc.toFixed(2));
+  return imc;
 }
-imc("José","Da Silva",27,83.5,1.7)
+const imc = imc("Masculino",27,83.5,1.7);
+console.log(imc);
 
