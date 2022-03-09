@@ -72,6 +72,16 @@ arr[4] = 25;
 arr[10] = 25;
 console.log(arr[7]);
 
+let numeros = [1,2,3,4];
+function soma(array){
+ 
+  return array[0] + 
+
+}
+
+console.log(inverter(numeros));
+
+
 
 
 
