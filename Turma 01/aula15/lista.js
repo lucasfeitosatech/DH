@@ -117,24 +117,4 @@ function competicao(participanteA, participanteB, participanteC) {
 
 competicao(participanteA, participanteB, participanteC);
 
-alice = [23, 82, 46];
-bob = [45, 8, 32];
 
-let ponto_a = 0;
-let ponto_b = 0;
-
-for (let i = 0; (i) => a.lenght; i++) {
-  if (alice[i] < bob[i]) {
-    console.log("ponto para bob na rodada " + (i + 1));
-    ponto_b = ponto_b + 1;
-  } else if (alice[i] > bob[i]) {
-    console.log("ponto para a alice na rodada " + (i + 1));
-    ponto_a = ponto_a + 1;
-  }
-}
-
-if (ponto_a > ponto_b) {
-  console.log("vencedor alice");
-} else if (ponto_a < ponto_b) {
-  console.log("vencedor bob");
-}

@@ -1,37 +1,33 @@
-let Alice = [23, 67, 32]
-let Bob = [12, 67, 43]
-let Hans = [34, 24, 42]
+let modulesRegistered = [1,2,3];
 
-var playerA = 0
-var playerB = 0
-
-let calcPoints = (a, b) => {
-  for (i = 0; i < 3; i++) {
-    if (a[i] == b[i]) {
-      return
-      // ROUND DRAW! console.log("Player A points increased by one. Now it's " + playerA)
-    } else if (a[i] > b[i]) {
-      playerB = playerB + 1
-      // console.log("Player B points increased by one. Now it's " + playerB)
-      return playerB
-    } else if (a[i] < b[i]) {
-      playerA = playerA + 1
-      return playerA
-    }
+function removeFeature(item) {
+  const index = modulesRegistered.indexOf(item);
+  if (index > -1) {
+    modulesRegistered.splice(index, 1); // 2nd parameter means remove one item only
   }
+  console.log(modulesRegistered);
 }
 
-let findWinner = (playerA, playerB, c) => {
-  c(playerA,playerB);
-  if (playerA == playerB) {
-    console.log(
-      "Unfortunately the prize will be shared since the participants has tie'd the competition"
-    )
-  } else if (playerB > playerA) {
-    console.log('Player B won the match! WINNER WINNER CHICKEN DINNER!')
-  } else if (playerA > playerB) {
-    console.log('Player A won the match! WINNER WINNER CHICKEN DINNER!')
+removeFeature(2);
+
+
+const asiaScores = [8, 10, 6, 9, 10, 6, 6, 8, 4];
+const euroScores = [8, 10, 6, 8, 10, 6, 7, 9, 5];
+
+function compara (a, b) {
+  let comparando = []
+  for (let i = 0; i < a.length; i++) {
+    comparando.push(a[i] == b[i] ? "iguais" : "diferentes")
   }
+  return comparando;
 }
 
-findWinner(Bob, Alice, calcPoints)
+console.log(compara(asiaScores, euroScores))
+
+for(let i = 1 ; i< 10; i++){
+  console.log(`\nTabuada do ${i}:
+  `);
+  for(let j = 0;j<10;j++){
+    console.log(`${i} x ${j} = ${i*j}`); 
+  }
+}
