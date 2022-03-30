@@ -41,9 +41,8 @@ do {
   console.log("Do while...");
 } while(false);
 
-let qtdAlunos = 5;
 //            0   1   2   3    4
-let notas = [6.7,7.8,9.5,10.0,5.6];
+let notas = [6.7,7.8,9.5,10.0,5.6,8.4,1.1];
 let soma = 0;
 let i = 0;
 // i < notas.length -> Faz um laço de repetição 
@@ -55,4 +54,4 @@ while(i < notas.length){
   i++;
 }
 
-console.log(`A media da turma é: ${soma/qtdAlunos}`)
+console.log(`A media da turma é: ${soma/notas.length}`)
