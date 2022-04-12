@@ -3,11 +3,10 @@ let contador = 0;
 contador++;//1
 contador++;//2
 console.log(contador);
+const calculadora = require('../../modulos/calculadora/calculadora.js');
 
 //Declaração de função
-function minhaFuncao() {
-  console.log("Minha função");
-}
+calculadora.minhaFuncao();
 //Execução da função
 // minhaFuncao();
 // minhaFuncao();
@@ -17,20 +16,7 @@ function minhaFuncao() {
 //   return num1 + num2;
 //   let x = num1 + num2;
 // }
-console.log(soma2(2,4));
+console.log(calculadora.soma(2,4));
 //Tradicional - Possui escopo global
-function soma(num1,num2,num3){
-  return num1 + num2;
-}
-
-function dividir(num1,num2){
-  return num1 / num2;
-}
-
-
-
-function mediaDeTres(num1,num2,num3){
-
-  return (num1)
-}
+calculadora.mediaDeTres();
 

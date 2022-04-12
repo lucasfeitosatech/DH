@@ -1,3 +1,16 @@
-import { x } from "../app";
+let aluno = {
+  calcularMedia: function(){
 
-console.log(x);
+  }
+}
+
+let media = function(){
+  if(true){
+    
+  }
+  else{
+    return 
+  }
+}
+
+console.log(media());

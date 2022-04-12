@@ -5,6 +5,7 @@
 let fs = require('fs');
 const numeros = [1,2,4,5,6,7,8,9,10];
 
+
 //fs.writeFileSync("escrita.txt", "Estou modificando o conteudo do arquivo usando o JS");
 //console.log(dadosDoArquivo);
 const dados = fs.readFileSync('./notas.csv',{encoding:'utf8', flag:'r'});
