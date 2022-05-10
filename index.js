@@ -1,16 +1,16 @@
-let aluno = {
-  calcularMedia: function(){
+function Pessoa(nome, altura, sexo) {
+  this.nome = nome;
+  this.altura = altura;
+  this.sexo = sexo;
+
+  this.minhaFuncao = function(){
+    console.log("Teste")
+  }
+
+  this.outraFuncao = function(){
 
   }
 }
 
-let media = function(){
-  if(true){
-    
-  }
-  else{
-    return 
-  }
-}
-
-console.log(media());
+const pessoa1 = new Pessoa('',1.8,'F');
+pessoa1.minhaFuncao();
