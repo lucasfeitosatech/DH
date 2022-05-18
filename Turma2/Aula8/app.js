@@ -15,7 +15,7 @@ if(media >= 7) {
 function situacaoAluno(status){
   return status;
 }
-
+//
 // Tem uma particularidade de precisar de um valor de retorno
 // ? -> Verdadeiro da condição
 // : -> falso da condição
