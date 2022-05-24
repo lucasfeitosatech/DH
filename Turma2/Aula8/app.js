@@ -27,3 +27,13 @@ situacao = media >= 7 ? 'Aprovado'
 : 'Reprovado'; 
 
 console.log(situacao);
+
+function imc(altura,peso){
+  let imc = altura/peso**2;
+  if(imc > 18 ){
+    return 'Peso normal';
+  } else if(imc < 15){
+    return 'Abaixo do peso';
+  }
+}
+

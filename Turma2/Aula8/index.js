@@ -1,4 +1,4 @@
-let readlineSync = require('../../lib/readline-sync.js');
+let readlineSync = require('readline-sync');
 
 let str = '' // -> false 
 let msg = 'haha!' // -> true
