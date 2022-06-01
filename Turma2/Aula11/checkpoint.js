@@ -1,3 +1,15 @@
+let readlineSync = require('readline-sync');
+
+console.log(`
+
+      1 - Pipoca – 10 segundos (padrão);
+      2 - Macarrão – 8 segundos (padrão);
+      3 - Carne – 15 segundos (padrão);
+      4 - Feijão – 12 segundos (padrão);
+      5 - Brigadeiro – 8 segundos (padrão); 
+`);
+
+
 function microondas1(opcao, tempo) {
   // Escolha , caso
   let tempoPadrao;
@@ -118,6 +130,7 @@ function microondas3(opcao, tempo) {
 
 
 function microondas4(opcao, tempo) { 
+  //               0      1  2  3  4 5
   let tempos = [undefined,10,8,15,12,8];
 
   if(typeof opcao != 'number' || tempos[opcao] === undefined){
@@ -136,10 +149,18 @@ function microondas4(opcao, tempo) {
     console.log("Kabumm!");
   }
 
+  console.log('Prato pronto, bom apetite!!!.');
 
 }
+let opcao  = readlineSync.questionInt('Digite a opcão escolhida:');
+let tempo = readlineSync.questionInt('Digite o tempo de execucao:');
+microondas4(opcao,tempo);
 
-microondas4()
+
+
+
+
+
 // typeof = tipo de -> Diz para nós qual o tipo da variavel 
 
 
