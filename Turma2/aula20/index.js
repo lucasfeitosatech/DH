@@ -1,3 +1,5 @@
+let calculadora = require('../../Modulos/Calculadora/index');
+calculadora.soma(2,5,5);
 /*
   Módulos Nativos do Node.JS 
   Módulos Externos de outras pessoas
