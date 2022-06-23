@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap 101 Template</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+
+  </head>
+    <body style="background-color: #f2f2f2;" >
+    
+
+    <div class="contaier">
+
+      <div style="height: 70px;" class="navbarCustom bg-white p-3">
+        <h3 class="text-dark" >Bootcamp Reply</h1>
+      </div> 
+
+      <div style="width: 80%;"  class="cardCustom bg-white mx-auto p-5 mt-5">
+        
+        <h4>Consultar Cep</h5>
+        
+        <div class="row mt-4">
+          <div class="col-sm-4">
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control" id="cep">
+            <p id="erro" style="color:red; display:none;">Não foi possível consultar o cep</p>
+          </div>
+          <div class="col-sm-8">
+            <label for="cep">Endereço</label>
+            <input disabled type="text" class="form-control" id="endereco">
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-auto">
+            <button type="button" onclick="getCep()" class="btn btn-primary">Consultar</button>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+      
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

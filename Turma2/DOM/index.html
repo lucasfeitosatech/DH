@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="meuFormulario">
+      <label for="usuario">Usuário</label>
+      <input name="usuario" type="text"/>
+      <label for="email">Email</label>
+      <input name="email" type="text"/>
+      <input onclick="enviarDados()" type="button" value="Enviar dados"/>
+    </form>
+    <script>
+      let qtdDeAlterações = 0;
+      function aoClicarNobotao() {
+        const p = document.getElementById("p1");
+        p.innerHTML =
+          "Quantidade de vezes que apertei o botão: " + qtdDeAlterações;
+        qtdDeAlterações++;
+      }
+
+      function enviarDados(event){
+        const form = document.getElementById('meuFormulario');
+        const usuario = form[0].value;
+        const email = form[1].value;
+        const dadosEnviados = {
+          usuario:usuario,
+          email:email
+        };
+
+        setTimeout(() => {
+          console.log(`
+          Dados enviados para o servidor....
+          ${JSON.stringify(dadosEnviados)}
+        `);
+        },3000);
+       
+      }
+
+    </script>
+  </body>
+</html>
