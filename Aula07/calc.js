@@ -110,7 +110,7 @@ Exemplo: geradorDePorcentagem
 function geradorDePorcentagem(valorParcial,valorTotal){
   // return (valorParcial/valorTotal)*100;
   let percentual = dividir(valorParcial,valorTotal);
-  return multiplicar(percentual,100);
+  return multiplicar(percentual,100) + '%';
 }
 
 retorno = geradorDePorcentagem(100,200);//50%
