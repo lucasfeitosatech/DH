@@ -1,4 +1,4 @@
-// const readlineSync = require('readline-sync');
+const readlineSync = require('readline-sync');
 
 // console.log(`
 //   Bem-vindo ao X-podrão 
@@ -11,8 +11,10 @@
 
 // `);
 
-// readlineSync.question('Qual a sua opção?')
-// readlineSync.question('Qual o tempo de execução')
+readlineSync.question('Qual a sua opção?',{
+  encoding:'utf16'
+})
+readlineSync.question('Qual o tempo de execução')
 
 
 function microondas(opcao,tempo){
