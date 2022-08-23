@@ -3,7 +3,6 @@
     If ternário
     Strings
     Arrays
-*/
 
 // If Ternário 
 
