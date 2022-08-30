@@ -23,9 +23,9 @@ for(let i = 0;i<linhas.length;i++){
   console.table(colunas);
   
   const titular = colunas[0];
-  // const numero = colunas[1];
-  // const tipo = colunas[2];
-  // const saldo = colunas[3];
+  const numero = colunas[1];
+  const tipo = colunas[2];
+  const saldo = colunas[3];
 
-  // console.log('Contéudo da linha: ',i,titular,numero,tipo,saldo);
+  console.log('Contéudo da linha: ',i,titular,numero,tipo,saldo);
 }
