@@ -3,6 +3,7 @@
 // Participante C:  7, 5, 10, 8, 3
 
 const readlineSync = require('readline-sync');
+const calculadora = require('../Modulos/Calculadora/index.js');
 
 const concurso = {
   participantes:[],

@@ -19,35 +19,7 @@ primeiro sobre o segundo. */
 // const readlineSync = require('readline-sync');
 // readlineSync.questionInt()
 
-function adicionar(numero1,numero2,numero3 = 0){
-  return numero1 + numero2 + numero3;
-}
-
-let retorno = adicionar(5,6);
-console.log(retorno);
-
-function subtrair(numero1,numero2){
-  return numero1 - numero2;
-}
-
-retorno = subtrair(5,6);
-console.log(retorno);
-
-function dividir(numero1,numero2){
-  return numero1/numero2;
-}
-
-retorno = dividir(5,6);
-console.log(retorno);
-
-function multiplicar(numero1,numero2){
-  // numero1 = 4
-  // numero2 = 4
-  return numero1*numero2;
-}
-
-retorno = multiplicar(5,6);
-console.log(retorno);
+const calculadora = require('../Modulos/Calculadora/index.js');
 
 /* Crie uma função chamada quadradoDoNumero, 
 que recebe um número como parâmetro e deve retornar esse número 
