@@ -1,14 +1,17 @@
 // -> Comentário de uma linha
 
+
 /*
   Aula 01 - Pensamento computacional
 
-  Aulas: Seg,Ter,Qua -> 19:00 -> 20:45 
+  Aulas: Seg,Ter,Qua -> 21:00 -> 22:45
 
   Avaliações: 
     - Checkpoint 1 -> Prático (código)
     - Checkpoint 2 -> Prova (forms) -> Subjetivo (Multipla escolha)
     - Checkpoint Final (3) -> Trabalho final -> Prático (código)
+
+    - Serão desenvolvidos em grupo, porém entrega sempre individual
 
     Composição da nota: 
 
