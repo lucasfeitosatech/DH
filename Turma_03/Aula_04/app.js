@@ -1,20 +1,23 @@
 
 
 // Diferença entre let e var;
+/*
+  let 
+    -> Não pode ser acessado antes da inicializaçao
+    -> Só é visível dentro do escopo o qual foi declarado
+  var
+    -> Possui visibilidade global
+    -> Pode ser acessado fora do escopo o qual foi definido
+    -> Pode ser acessado antes da inicialização
 
-console.log(minhaVariavel); // undefined
-// Declaração de variável;
-var minhaVariavel = 5;
-console.log(minhaVariavel); // 5
-// Reatribuindo a variavável
-minhaVariavel = 20;
+*/
+
+{
+  let x = 5; // undefined;
 
 
-// Visibilidade Global
-
-
-minhaVariavel = 12;
-console.log(minhaVariavel); // 12
+}
+console.log(x);
 
 
 
