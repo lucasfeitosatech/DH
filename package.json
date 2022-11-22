@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/lucasfeitosatech/DH#readme",
   "dependencies": {
+    "moment": "^2.29.4",
     "readline-sync": "^1.4.10"
   }
 }
