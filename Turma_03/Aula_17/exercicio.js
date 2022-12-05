@@ -8,15 +8,23 @@ const fs = require('fs'); // Modulo interno do NodeJS
   Quebra de linha nas linguagens de programação
   \n -> Indica uma quebra de linha
 */
-class Conta {
-  constructor(conta, tipo, saldo, titular) {
-    this.conta = conta;
-    this.tipo = tipo;
-    this.saldo = saldo;
-    this.titular = titular;
-  }
+// class Conta {
+//   constructor(conta, tipo, saldo, titular) {
+//     this.conta = conta;
+//     this.tipo = tipo;
+//     this.saldo = saldo;
+//     this.titular = titular;
+//   }
 
-  // metódos...
+//   // metódos...
+// }
+
+function Conta(conta, tipo, saldo, titular){
+  // this -> {}
+  this.conta = conta;
+  this.tipo = tipo;
+  this.saldo = saldo;
+  this.titular = titular;
 }
 /* 
 5 - Também nos pedem a criação de um objeto literal chamado banco que 
@@ -26,7 +34,11 @@ ele será composto pela lista de objetos gerados no ponto anterior. */
 const banco = {
   clientes: [],
   adicionarCliente(conta, tipo, saldo, titular) {
-    const novaConta = new Conta(conta, tipo, saldo, titular);
+    // Forma literal
+    // const novaConta = {
+    //   conta, tipo, saldo, titular
+    // }
+    const novaConta = new Conta(conta,tipo,saldo,titular);
     this.clientes.push(novaConta);
   },
   consultarCliente(contaABuscar) {
@@ -44,11 +56,11 @@ const banco = {
     // }
 
   },
-  deposito(contaDeposito,valorASerDepositado){
+  deposito(contaDeposito, valorASerDepositado) {
     // Verifica se existe uma conta na lista de clientes
     const contaBuscada = this.consultarCliente(contaDeposito);
     // Caso a conta exista 
-    if(contaBuscada){
+    if (contaBuscada) {
       // Adiciona o valor no saldo;
       console.log('Conta encontrada com sucesso. Iniciando depósito para o titular: ' + contaBuscada.titular);
       contaBuscada.saldo += valorASerDepositado;
@@ -57,15 +69,15 @@ const banco = {
       console.log("Conta não encontrada! Depósito cancelado");
     }
   },
-  saque(contaSaque,valorSaque){
+  saque(contaSaque, valorSaque) {
     const contaBuscada = this.consultarCliente(contaSaque);
     // Caso a conta exista 
-    if(contaBuscada){
+    if (contaBuscada) {
       // Adiciona o valor no saldo;
       console.log('Conta encontrada com sucesso. Iniciando saque para o titular: ' + contaBuscada.titular);
-      if(valorSaque <= contaBuscada.saldo){
+      if (valorSaque <= contaBuscada.saldo) {
         contaBuscada.saldo -= valorSaque;
-        console.log("Extração feita com sucesso, seu novo saldo é: R$ " + contaBuscada.saldo );
+        console.log("Extração feita com sucesso, seu novo saldo é: R$ " + contaBuscada.saldo);
       } else {
         console.log("Fundos insuficientes");
       }
@@ -91,8 +103,8 @@ for (let linha of linhas) {
 
 }
 
-banco.deposito('5486273622',100);
-banco.deposito('5486273622',50);
-banco.saque('5486273622',160);
+banco.deposito('5486273622', 100);
+banco.deposito('5486273622', 50);
+banco.saque('5486273622', 160);
 
 
