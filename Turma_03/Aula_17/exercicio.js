@@ -1,63 +1,98 @@
-const conta = {
-  //... propriedades
-}
+const fs = require('fs'); // Modulo interno do NodeJS
 
+/*
+  Módulos Interno  -> File System
+  Módulos Externos (Desenvolvidos pela comunidade) -> readline-sync
+  Módulos proprios 
 
-// Número da conta (somente números)
-// Tipo de conta (conta corrente ou poupança em $)
-// Saldo em $ (valor apenas)
-// Titular da conta (nome completo)
-
-function Conta(conta,tipo,saldo,titular){
-  // ... criar a funcão construtura
-}
-
+  Quebra de linha nas linguagens de programação
+  \n -> Indica uma quebra de linha
+*/
 class Conta {
-  constructor(conta,tipo,saldo,titular){
-// ... montagem do objeto
+  constructor(conta, tipo, saldo, titular) {
+    this.conta = conta;
+    this.tipo = tipo;
+    this.saldo = saldo;
+    this.titular = titular;
   }
 
   // metódos...
 }
+/* 
+5 - Também nos pedem a criação de um objeto literal chamado banco que 
+terá uma propriedade chamada clientes, 
+ele será composto pela lista de objetos gerados no ponto anterior. */
 
 const banco = {
-  clientes:[],
-  adicionarCliente(conta,tipo,saldo,titular){
-    const novaConta = new Conta()
-    // ...
+  clientes: [],
+  adicionarCliente(conta, tipo, saldo, titular) {
+    const novaConta = new Conta(conta, tipo, saldo, titular);
+    this.clientes.push(novaConta);
+  },
+  consultarCliente(contaABuscar) {
+    for (let cliente of this.clientes) {
+      if (contaABuscar === cliente.conta) {
+        return cliente
+      }
+    }
+
+    // for(let i = 0;i < this.clientes.length;i++){
+    //   const cliente = this.clientes[i];
+    //   if(contaABuscar === cliente.conta){
+    //     return cliente
+    //   }
+    // }
+
+  },
+  deposito(contaDeposito,valorASerDepositado){
+    // Verifica se existe uma conta na lista de clientes
+    const contaBuscada = this.consultarCliente(contaDeposito);
+    // Caso a conta exista 
+    if(contaBuscada){
+      // Adiciona o valor no saldo;
+      console.log('Conta encontrada com sucesso. Iniciando depósito para o titular: ' + contaBuscada.titular);
+      contaBuscada.saldo += valorASerDepositado;
+      console.log('Depósito realizado, seu novo saldo é: R$ ' + contaBuscada.saldo);
+    } else {
+      console.log("Conta não encontrada! Depósito cancelado");
+    }
+  },
+  saque(contaSaque,valorSaque){
+    const contaBuscada = this.consultarCliente(contaSaque);
+    // Caso a conta exista 
+    if(contaBuscada){
+      // Adiciona o valor no saldo;
+      console.log('Conta encontrada com sucesso. Iniciando saque para o titular: ' + contaBuscada.titular);
+      if(valorSaque <= contaBuscada.saldo){
+        contaBuscada.saldo -= valorSaque;
+        console.log("Extração feita com sucesso, seu novo saldo é: R$ " + contaBuscada.saldo );
+      } else {
+        console.log("Fundos insuficientes");
+      }
+    } else {
+      console.log("Conta não encontrada! Depósito cancelado");
+    }
   }
 }
 
 
 
+const meusDados = fs.readFileSync('./dados.csv', { encoding: 'utf-8' });
+const linhas = meusDados.split('\r\n');
+for (let linha of linhas) {
+  // Desestruturação
+  // const [titular,numero,tipo,saldo] = linha.split(',');
+  const colunas = linha.split(',');
+  const titular = colunas[0];
+  const numero = colunas[1];
+  const tipo = colunas[2];
+  const saldo = Number(colunas[3]);
+  banco.adicionarCliente(numero, tipo, saldo, titular);
 
-let i = 0;
+}
 
-function media(array){
-    let soma = 0;
-    while (i < array.length) {
-      soma += array[i];
-      i++;
-    }
-    media = soma/array.length
-    return media;
-};
+banco.deposito('5486273622',100);
+banco.deposito('5486273622',50);
+banco.saque('5486273622',160);
 
-function maior(array){
-  let a = 0;
-  let b = 0;
-  let i = 0;
-  while (i < array.length) {
-    a = array[i];
-    if (a > b) {
-      b = a
-    }
-    i++;
-  }
-  maior = b
-  return maior;
-};
 
-console.log(`A média mais o maior valor do participante A é ${maior(participanteA) + media(participanteA)}`);
-console.log(`A média mais o maior valor do participante B é ${maior(participanteB) + media(participanteB)}`); 
-console.log(`A média mais o maior valor do participante C é ${maior(participanteC) + media(participanteC)}`);
