@@ -24,3 +24,5 @@
     - Discord -> Canal ofical de comunição
 
 */
+
+const readlineSync = require('readline-sync');
