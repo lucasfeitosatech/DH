@@ -35,13 +35,18 @@ const banco = {
   clientes: [],
   adicionarCliente(conta, tipo, saldo, titular) {
     // Forma literal
-    // const novaConta = {
-    //   conta, tipo, saldo, titular
-    // }
-    const novaConta = new Conta(conta,tipo,saldo,titular);
+    const novaConta = {
+      conta, tipo, saldo, titular
+    }
+    //const novaConta = new Conta(conta,tipo,saldo,titular);
     this.clientes.push(novaConta);
   },
   consultarCliente(contaABuscar) {
+
+    banco.clientes
+    // this -> É o proprio objeto que estamos trabalhando/manipulando
+
+
     for (let cliente of this.clientes) {
       if (contaABuscar === cliente.conta) {
         return cliente
@@ -106,5 +111,8 @@ for (let linha of linhas) {
 banco.deposito('5486273622', 100);
 banco.deposito('5486273622', 50);
 banco.saque('5486273622', 160);
+
+// Possibilita realizarmos a exportação de dados para outro arquivo
+module.exports = banco;
 
 
