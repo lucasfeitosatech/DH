@@ -36,7 +36,6 @@
 //   this.preco = preco;
 //   this.quantidade = quantidade;
 
-
   // Metódos;
   this.valorFinal = function(){
     return this.preco*this.quantidade;
@@ -121,6 +120,7 @@ console.log(estoque.buscarAlimentoPorId(5));
 
 // console.log(estoque);
 
+soma(10,3);
 
 
 
