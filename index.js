@@ -1,1 +1,0 @@
-const {} = require('./modulos/calculadora/index');
