@@ -140,6 +140,35 @@ const media = soma/numeros2.length;
 // acc -> 15 return 15 + 9;
 // acc -> 24
 
+class Aluno {
+  constructor(nome = '', faltas = 0, notas = []) {
+    this.nome = nome;
+    this.faltas = faltas;
+    this.notas = notas;
+    this.addFaltas = function faltas() {
+      this.faltas++;
+    }
+  }
+
+  media() {
+    let total = this.notas.reduce((acc, valor) => (acc + valor));
+    let media = total / this.notas.length;
+    return media
+  }
+  
+  metodo2(){
+
+  }
+
+  metodo3(){
+
+  }
+}
+
+const aluno = new Aluno();
+aluno.media();
+aluno.faltas();
+
 
 
 
