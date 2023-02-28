@@ -1,0 +1,22 @@
+{
+  "name": "turma01.2023.dh",
+  "version": "1.0.0",
+  "description": "Aulas de programacao imperativa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasfeitosatech/DH.git"
+  },
+  "author": "Lucas Feitosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasfeitosatech/DH/issues"
+  },
+  "homepage": "https://github.com/lucasfeitosatech/DH#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
