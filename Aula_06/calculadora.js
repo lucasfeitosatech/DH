@@ -1,10 +1,17 @@
 /*
   Calculadora - Nível I
+
+  Valor padrão (default) dos parametros
 */
 
-function soma(num1,num2){
+function soma(num1 = 0,num2 = 0){
+  // num1 = 5
+  // num2 = 0
+  // 5 + undefined = NaN -> Nao é um número
   return num1 + num2;
 }
+
+console.log('Soma: ' , soma(5));
 
 function subtracao(num1,num2){
   return num1 - num2;
