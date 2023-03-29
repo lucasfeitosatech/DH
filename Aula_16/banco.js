@@ -1,6 +1,10 @@
 // 1 e 3 - 
 
 class Conta {
+  /*
+  Um modelo de criação dos objetos 
+
+  */
   constructor(numero,tipo,saldo,titular){
     // this -> {} -> objeto vazio
     this.numero = numero
@@ -11,6 +15,32 @@ class Conta {
 }
 
 // 2 e 4- 
+class Banco {
+  constructor(nome){
+    this.clientes = [];
+    this.nome = nome;
+  }
+
+  consultarCliente(titularASerConsultado) {
+    for(let cliente of this.clientes){
+      if(cliente.titular === titularASerConsultado){
+        return cliente;
+      }
+    }
+    return null; 
+  }
+  
+  metodo2(){
+
+  }
+
+  metodo3(){
+    
+  }
+}
+
+const santander = new Banco('Santander');
+santander.consultarCliente()
 
 
 
@@ -40,14 +70,23 @@ const banco = {
       }
     }
     return null;    
+  },
+  deposito(titular,valorDeposito){
+
+
+  },
+  listarClientes(){
+    console.table(banco.clientes);
   }
 }
 banco.adicionarCliente('01','conta corrente',0,'Fulano 1');
 banco.adicionarCliente('02','conta corrente',0,'Fulano 2');
 banco.adicionarCliente('03','conta corrente',0,'Fulano 3');
 banco.adicionarCliente('04','conta corrente',0,'Lucas');
-const clienteEncontrado = banco.consultarCliente('Fulano 1');
+const clienteEncontrado = banco.consultarCliente('Lucas');
 console.log(clienteEncontrado);
+banco.deposito('Lucas',50);
+banco.listarClientes();
 
 //console.table(banco.clientes);
 
