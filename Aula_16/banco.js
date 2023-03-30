@@ -70,26 +70,10 @@ const banco = {
     return null;
   },
   deposito(titular, valorDeposito) {
-    const cliente = this.consultarCliente(titular);
-    if (cliente !== null) {
-      cliente.saldo += valorDeposito;
-      console.log("Seu novo saldo é de: R$ " + cliente.saldo.toFixed(2));
-    } else {
-      console.log("Não foi possível realizar o depósito");
-    }
+
   },
   saque(titular, valorSaque) {
-    const cliente = this.consultarCliente(titular);
-    if (cliente !== null) {
-      if (cliente.saldo < valorSaque) {
-        console.log("Não foi possível realizar o saque: Saldo insuficiente");
-      } else {
-        cliente.saldo -= valorSaque;
-        console.log("Seu novo saldo é de: R$ " + cliente.saldo.toFixed(2));
-      }
-    } else {
-      console.log("Não foi possível realizar o depósito");
-    }
+  
   },
   listarClientes() {
     console.table(banco.clientes);
